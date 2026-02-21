@@ -79,6 +79,7 @@ canvas{
     font-size:16px;
     opacity:0.9;
 }
+/* Base styles for all messages */
 .message-box {
     position: fixed;
     padding: 12px 18px;
@@ -86,8 +87,10 @@ canvas{
     color: white;
     border-radius: 10px;
     cursor: pointer;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     z-index: 9999;
+    max-width: 90%; /* fit small screens */
+    word-wrap: break-word;
 }
 
 /* hidden message */
@@ -103,44 +106,50 @@ canvas{
     display: block;
 }
 
-/* Top Right (keep at top) */
+/* Top Right */
 .top-right {
     top: 20px;
-    right: 20px;
+    right: 10px;
 }
 
-/* Right Down → move to bottom */
-.right-down {
-    bottom: 20px;   /* changed from top */
-    right: 20px;
-}
-
-/* Top Left (keep at top) */
+/* Top Left */
 .top-left {
     top: 20px;
-    left: 20px;
+    left: 10px;
 }
 
-/* Left Down → move to bottom */
-.left-down {
-    bottom: 20px;   /* changed from top */
-    left: 20px;
-}
-
-/* Top Middle (keep at top) */
+/* Top Middle */
 .top-middle {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
 }
-/* Bottom Left → slightly above bottom */
+
+/* Bottom Left */
 .left-down {
-    bottom: 60px;   /* move it a bit higher */
-    left: 20px;
+    bottom: 60px; /* slightly above bottom */
+    left: 10px;
 }
 
-/* Bottom Right → slightly lower */
+/* Bottom Right */
 .right-down {
     bottom: 20px;
-    right: 20px;
+    right: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .top-left, .top-right, .top-middle,
+    .left-down, .right-down {
+        max-width: 80%;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .top-left { top: 15px; left: 5px; }
+    .top-right { top: 15px; right: 5px; }
+    .top-middle { top: 15px; left: 50%; transform: translateX(-50%); }
+
+    .left-down { bottom: 50px; left: 5px; }
+    .right-down { bottom: 10px; right: 5px; }
 }
