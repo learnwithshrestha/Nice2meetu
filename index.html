@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Magical Night Flowers</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="not-loaded">
+
+<!-- BACKGROUND IMAGE FROM SECOND HTML -->
+<div class="background"></div>
+
+<!-- NIGHT BACKGROUND FROM FIRST HTML -->
+<div class="night"></div>
+
+<!-- CANVAS FROM SECOND HTML -->
+<canvas id="canvas"></canvas>
+
+<!-- FLOWERS FROM FIRST HTML -->
+<div class="flowers">
+
+<div class="flower flower--1">
+<div class="flower__leafs flower__leafs--1">
+<div class="flower__leaf flower__leaf--1"></div>
+<div class="flower__leaf flower__leaf--2"></div>
+<div class="flower__leaf flower__leaf--3"></div>
+<div class="flower__leaf flower__leaf--4"></div>
+<div class="flower__white-circle"></div>
+
+<div class="flower__light flower__light--1"></div>
+<div class="flower__light flower__light--2"></div>
+<div class="flower__light flower__light--3"></div>
+<div class="flower__light flower__light--4"></div>
+<div class="flower__light flower__light--5"></div>
+<div class="flower__light flower__light--6"></div>
+<div class="flower__light flower__light--7"></div>
+<div class="flower__light flower__light--8"></div>
+
+</div>
+
+<div class="flower__line">
+<div class="flower__line__leaf flower__line__leaf--1"></div>
+<div class="flower__line__leaf flower__line__leaf--2"></div>
+<div class="flower__line__leaf flower__line__leaf--3"></div>
+<div class="flower__line__leaf flower__line__leaf--4"></div>
+<div class="flower__line__leaf flower__line__leaf--5"></div>
+<div class="flower__line__leaf flower__line__leaf--6"></div>
+</div>
+
+</div>
+
+
+<div class="flower flower--2">
+<div class="flower__leafs flower__leafs--2">
+<div class="flower__leaf flower__leaf--1"></div>
+<div class="flower__leaf flower__leaf--2"></div>
+<div class="flower__leaf flower__leaf--3"></div>
+<div class="flower__leaf flower__leaf--4"></div>
+<div class="flower__white-circle"></div>
+
+<div class="flower__light flower__light--1"></div>
+<div class="flower__light flower__light--2"></div>
+<div class="flower__light flower__light--3"></div>
+<div class="flower__light flower__light--4"></div>
+<div class="flower__light flower__light--5"></div>
+<div class="flower__light flower__light--6"></div>
+<div class="flower__light flower__light--7"></div>
+<div class="flower__light flower__light--8"></div>
+
+</div>
+
+<div class="flower__line">
+<div class="flower__line__leaf flower__line__leaf--1"></div>
+<div class="flower__line__leaf flower__line__leaf--2"></div>
+<div class="flower__line__leaf flower__line__leaf--3"></div>
+<div class="flower__line__leaf flower__line__leaf--4"></div>
+</div>
+
+</div>
+
+
+<div class="flower flower--3">
+<div class="flower__leafs flower__leafs--3">
+<div class="flower__leaf flower__leaf--1"></div>
+<div class="flower__leaf flower__leaf--2"></div>
+<div class="flower__leaf flower__leaf--3"></div>
+<div class="flower__leaf flower__leaf--4"></div>
+<div class="flower__white-circle"></div>
+
+<div class="flower__light flower__light--1"></div>
+<div class="flower__light flower__light--2"></div>
+<div class="flower__light flower__light--3"></div>
+<div class="flower__light flower__light--4"></div>
+<div class="flower__light flower__light--5"></div>
+<div class="flower__light flower__light--6"></div>
+<div class="flower__light flower__light--7"></div>
+<div class="flower__light flower__light--8"></div>
+
+</div>
+
+<div class="flower__line">
+<div class="flower__line__leaf flower__line__leaf--1"></div>
+<div class="flower__line__leaf flower__line__leaf--2"></div>
+<div class="flower__line__leaf flower__line__leaf--3"></div>
+<div class="flower__line__leaf flower__line__leaf--4"></div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MUSIC FROM FIRST HTML -->
+<audio id="bgMusic" autoplay loop muted>
+<source src="music.mp4" type="audio/mpeg">
+</audio>
+
+
+<!-- FIRST HTML SCRIPT -->
+<script src="app.js"></script>
+
+<!-- SECOND HTML SCRIPT -->
+<script src="script.js"></script>
+
+
+<!-- MUSIC SCRIPT -->
+<script>
+window.addEventListener("load", function () {
+const music = document.getElementById("bgMusic");
+
+music.play().then(() => {
+
+setTimeout(() => {
+music.muted = false;
+music.volume = 1;
+}, 1000);
+
+}).catch(() => {
+
+document.addEventListener("click", () => {
+music.muted = false;
+music.play();
+}, { once: true });
+
+});
+
+});
+
+</script>
+<script>
+function toggleMessage(element) {
+    element.classList.toggle("active");
+}
+</script>
+<div class="message-box top-left" onclick="toggleMessage(this)">
+    🌻 1st msg
+    <div class="hidden-message">Hallo, wie geht's?🌸🌌</div>
+</div>
+
+<div class="message-box right-down" onclick="toggleMessage(this)">
+    🌙 4th msg
+    <div class="hidden-message">Now i will get block from tiktok i know, ja this is last msg danke</div>
+</div>
+<div class="message-box left-down" onclick="toggleMessage(this)">
+    ⭐ 2nd msg
+    <div class="hidden-message">✨sorry my mistake that i deactivate acc, i'm dum ja bec of overthinking ja 🌸🌌</div>
+</div>
+<div class="message-box top-right" onclick="toggleMessage(this)">
+    🌼 3rd msg
+    <div class="hidden-message">and also Danke, ma aba bihana bihana uthna sake ani belka tira ni jana sake Danke🌌</div>
+</div>
+<div class="message-box top-middle" onclick="toggleMessage(this)">
+    💐 Click me first
+    <div class="hidden-message">
+        click on middle like in black screen( ja bhayeni click gara okay) 🌸
+    </div>
+</div>
+</body>
+</html>
