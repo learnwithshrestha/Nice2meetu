@@ -103,29 +103,31 @@ canvas{
     display: block;
 }
 
-/* Top Right */
+/* Top Right (keep at top) */
 .top-right {
     top: 20px;
     right: 20px;
 }
 
-/* Right Down */
+/* Right Down → move to bottom */
 .right-down {
-    top: 80px;
+    bottom: 20px;   /* changed from top */
     right: 20px;
 }
 
-/* Top Left */
+/* Top Left (keep at top) */
 .top-left {
     top: 20px;
-    left: 20px;   /* FIXED */
+    left: 20px;
 }
 
-/* Left Down */
+/* Left Down → move to bottom */
 .left-down {
-    top: 80px;
-    left: 20px;   /* FIXED */
+    bottom: 20px;   /* changed from top */
+    left: 20px;
 }
+
+/* Top Middle (keep at top) */
 .top-middle {
     top: 20px;
     left: 50%;
