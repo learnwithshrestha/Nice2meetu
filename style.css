@@ -133,3 +133,14 @@ canvas{
     left: 50%;
     transform: translateX(-50%);
 }
+/* Bottom Left → slightly above bottom */
+.left-down {
+    bottom: 60px;   /* move it a bit higher */
+    left: 20px;
+}
+
+/* Bottom Right → slightly lower */
+.right-down {
+    bottom: 20px;
+    right: 20px;
+}
